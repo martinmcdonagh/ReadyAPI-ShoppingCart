@@ -1149,7 +1149,7 @@
         <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=20;</con1:property>
+        <con1:property key="limits">Time=10;</con1:property>
       </con1:attributes>
       <con1:addons>
         <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="696492d0-8606-487a-bf7c-e279a288ba08">
@@ -1220,7 +1220,7 @@
           <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
         </con1:properties>
         <con1:attributes>
-          <con1:property key="limits">Time=20;</con1:property>
+          <con1:property key="limits">Time=10;</con1:property>
         </con1:attributes>
         <con1:addons/>
         <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="c87e2701-6946-43ff-9073-6d6246a4a221" category="Scheduler">
@@ -1228,7 +1228,7 @@
             <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
             <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
             <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
-            <con1:property propagates="true" key="duration" type="java.lang.Long">10</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
             <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
             <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
             <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">false</con1:property>
@@ -1287,7 +1287,7 @@
           <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
         </con1:properties>
         <con1:attributes>
-          <con1:property key="limits">Time=20;</con1:property>
+          <con1:property key="limits">Time=10;</con1:property>
         </con1:attributes>
         <con1:addons>
           <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="c8d6cb5c-ebba-4a82-a512-0467921468cc">
@@ -1319,8 +1319,8 @@
           <con1:properties>
             <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
             <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-            <con1:property propagates="true" key="startAt" type="java.lang.Long">10</con1:property>
-            <con1:property propagates="true" key="duration" type="java.lang.Long">10</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">5</con1:property>
             <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
             <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
             <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">false</con1:property>
