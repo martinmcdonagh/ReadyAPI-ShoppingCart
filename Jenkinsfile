@@ -64,7 +64,6 @@ pipeline {
         stage('Virtualization - Stop & Undeploy') {
           steps {
             sleep 40
-            build(job: 'ReadyAPI Full Stack - UnDeploy and Stop VirtServer', wait: true, quietPeriod: 5)
           }
         }
       }
