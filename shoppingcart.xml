@@ -977,7 +977,7 @@
             </con:assertion>
             <con:assertion type="Response SLA Assertion" id="e81eb1b0-99d6-4132-b3d4-c48af0476a17" name="Response SLA - 2 seconds">
               <con:configuration>
-                <SLA>2000</SLA>
+                <SLA>5000</SLA>
               </con:configuration>
             </con:assertion>
             <con:assertion type="Simple NotContains" id="3fc84b14-358d-4476-bcc1-d0bfc18244d1" name="Not Contains - Invalid Login">
