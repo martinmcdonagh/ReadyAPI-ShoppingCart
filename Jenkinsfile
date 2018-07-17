@@ -50,7 +50,7 @@ pipeline {
             echo 'All microservices tests go here.'
           }
         }
-        stage('Virtualization : Deploy & Start') {
+        stage('Virtualization - Deploy & Start') {
           steps {
             build(job: 'ReadyAPI Full Stack - Deploy and Start VirtServer', quietPeriod: 5)
           }
