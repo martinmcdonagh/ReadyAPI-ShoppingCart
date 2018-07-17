@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="1895426a-3600-4f41-a804-849db287798c" created="2.3.0" activeEnvironment="Default environment" name="ShoppingCart" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="1895426a-3600-4f41-a804-849db287798c" created="2.3.0" activeEnvironment="Default environment" name="ShoppingCart2" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
@@ -401,7 +401,7 @@
             <con:originalUri>http://localhost/shoppingcart/api/get_products.php</con:originalUri>
             <con:assertion type="Response SLA Assertion" id="514beb90-fe8c-41f4-8d03-730637f4b438" name="Response SLA">
               <con:configuration>
-                <SLA>2000</SLA>
+                <SLA>5000</SLA>
               </con:configuration>
             </con:assertion>
             <con:credentials>
