@@ -1096,7 +1096,7 @@
         <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
         <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
         <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
-        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">50</con1:property>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">10</con1:property>
         <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">Relative</con1:property>
         <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
       </con1:properties>
@@ -1212,22 +1212,24 @@
           </con1:attributes>
           <con1:addons/>
         </con1:component>
-        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="45f7b854-04a1-43f5-bc06-2e68f9262f51" category="Generators">
+        <con1:component type="com.eviware.loadui.impl.component.generators.RampUpVU" label="Ramp Load 1" id="e3b1fd01-2858-4962-b294-eed8aeef4458" category="Generators">
           <con1:properties>
             <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
             <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
             <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
-            <con1:property propagates="true" key="load" type="java.lang.Long">50</con1:property>
-            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="peakVU" type="java.lang.Long">10</con1:property>
+            <con1:property propagates="true" key="baseVU" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="waitTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="rampDuration" type="java.lang.Long">3</con1:property>
           </con1:properties>
           <con1:attributes>
-            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ramp Load</con1:property>
           </con1:attributes>
           <con1:addons/>
         </con1:component>
-        <con1:connection outputTerminalId="c87e2701-6946-43ff-9073-6d6246a4a221/outgoingTerminal" inputTerminalId="45f7b854-04a1-43f5-bc06-2e68f9262f51/stateTerminal"/>
-        <con1:connection outputTerminalId="45f7b854-04a1-43f5-bc06-2e68f9262f51/triggerTerminal" inputTerminalId="7777022e-a8c7-4da0-8a24-4edcceeaffce/triggerTerminal"/>
-        <con1:connection outputTerminalId="7777022e-a8c7-4da0-8a24-4edcceeaffce/runningTerminal" inputTerminalId="45f7b854-04a1-43f5-bc06-2e68f9262f51/Sample Count"/>
+        <con1:connection outputTerminalId="c87e2701-6946-43ff-9073-6d6246a4a221/outgoingTerminal" inputTerminalId="e3b1fd01-2858-4962-b294-eed8aeef4458/stateTerminal"/>
+        <con1:connection outputTerminalId="e3b1fd01-2858-4962-b294-eed8aeef4458/triggerTerminal" inputTerminalId="7777022e-a8c7-4da0-8a24-4edcceeaffce/triggerTerminal"/>
+        <con1:connection outputTerminalId="7777022e-a8c7-4da0-8a24-4edcceeaffce/runningTerminal" inputTerminalId="e3b1fd01-2858-4962-b294-eed8aeef4458/Sample Count"/>
       </con1:scene>
       <con1:scene label="Buy a MacBook" id="fab4e49e-4667-4996-aef2-080c7b056fd0" version="1">
         <con1:properties>
@@ -1304,14 +1306,14 @@
           </con1:attributes>
           <con1:addons/>
         </con1:component>
-        <con1:component type="com.eviware.loadui.impl.component.generators.RampUpVU" label="Ramp Load 1" id="5af98a49-d6c2-4b30-9320-928b6c1c7f3a" category="Generators">
+        <con1:component type="com.eviware.loadui.impl.component.generators.RampUpVU" label="Ramp Load 2" id="a978cb87-f0ad-4ac5-82fb-1c210a74ec2a" category="Generators">
           <con1:properties>
             <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
             <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
             <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
-            <con1:property propagates="true" key="peakVU" type="java.lang.Long">50</con1:property>
-            <con1:property propagates="true" key="baseVU" type="java.lang.Long">2</con1:property>
-            <con1:property propagates="true" key="waitTime" type="java.lang.Long">2000</con1:property>
+            <con1:property propagates="true" key="peakVU" type="java.lang.Long">10</con1:property>
+            <con1:property propagates="true" key="baseVU" type="java.lang.Long">5</con1:property>
+            <con1:property propagates="true" key="waitTime" type="java.lang.Long">0</con1:property>
             <con1:property propagates="true" key="rampDuration" type="java.lang.Long">2</con1:property>
           </con1:properties>
           <con1:attributes>
@@ -1319,9 +1321,9 @@
           </con1:attributes>
           <con1:addons/>
         </con1:component>
-        <con1:connection outputTerminalId="b67f1adc-773b-419a-b01d-a5526f0ab3b4/outgoingTerminal" inputTerminalId="5af98a49-d6c2-4b30-9320-928b6c1c7f3a/stateTerminal"/>
-        <con1:connection outputTerminalId="5af98a49-d6c2-4b30-9320-928b6c1c7f3a/triggerTerminal" inputTerminalId="c0b9b1ac-b9b8-4df7-9976-83b228caaad7/triggerTerminal"/>
-        <con1:connection outputTerminalId="c0b9b1ac-b9b8-4df7-9976-83b228caaad7/runningTerminal" inputTerminalId="5af98a49-d6c2-4b30-9320-928b6c1c7f3a/Sample Count"/>
+        <con1:connection outputTerminalId="b67f1adc-773b-419a-b01d-a5526f0ab3b4/outgoingTerminal" inputTerminalId="a978cb87-f0ad-4ac5-82fb-1c210a74ec2a/stateTerminal"/>
+        <con1:connection outputTerminalId="a978cb87-f0ad-4ac5-82fb-1c210a74ec2a/triggerTerminal" inputTerminalId="c0b9b1ac-b9b8-4df7-9976-83b228caaad7/triggerTerminal"/>
+        <con1:connection outputTerminalId="c0b9b1ac-b9b8-4df7-9976-83b228caaad7/runningTerminal" inputTerminalId="a978cb87-f0ad-4ac5-82fb-1c210a74ec2a/Sample Count"/>
       </con1:scene>
       <con1:statistics>
         <con1:page title="DefaultLoadUIStatisticPage">
@@ -1362,7 +1364,7 @@
           </con1:chartGroup>
         </con1:page>
       </con1:statistics>
-      <con1:heatUpTime>15</con1:heatUpTime>
+      <con1:heatUpTime>0</con1:heatUpTime>
     </con1:loadui-project>
     <con:loadUITestScenario projectId="810751bc-bdc5-4778-b793-2ab1e1e58039" scenarioId="03302469-0158-4193-9f86-c174e4c09067" name="Get all orders" id="6b91dad4-8804-420c-a32c-0ed743c7c428">
       <con:settings/>
