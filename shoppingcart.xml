@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1895426a-3600-4f41-a804-849db287798c" created="2.3.0" activeEnvironment="Default environment" name="ShoppingCart" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="Test Case Report"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="ShoppingCart TestSuite"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="true"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="Buy all products - DataDriven"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default environment"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="C:\Program Files (x86)\Jenkins\workspace\SoaupUI_Pro Demo Build\reports"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+  </con:settings>
+  <con:interface xsi:type="con:RestService" id="40283e96-709d-4646-b526-a6b3984debb5" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost</con:endpoint>
+      <con:endpoint>http://localhost:8080/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Get_login" path="/shoppingcart/{type}/get_login/" id="27c5d13f-15cc-4d51-81ad-2ebf853c34af">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>type</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Get_login" id="85744855-ae9b-4613-8779-6362900d5f82" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="26443a27-5318-4baf-a347-4ba90b6e7d73" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/shoppingcart/api/get_login.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="type" value="json" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>type</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Get_products" path="/shoppingcart/{type}/get_products/" id="44006ec8-d419-4452-9bb8-3526d83e75d3">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>type</con:name>
+          <con:value>json</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>json</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Get_products" id="2d3ca9ef-e4cb-4aa6-b274-a4e8dc78f8ef" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Products</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="975c3c58-3874-4985-9b93-c4a22da48133" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/shoppingcart/api/get_products.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>type</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Get_orders" path="/shoppingcart/{type}/get_orders/" id="2252d196-f20b-4cf2-b249-5313c63673cc">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>type</con:name>
+          <con:value>json</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>json</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Get_orders" id="f76bd53c-3b3f-431b-a9c5-3ea213c4964c" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/xml</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Orders</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="28029d73-619b-4922-b1b6-31e4be01c6b5" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/shoppingcart/api/get_orders.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>type</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Post_order" path="/shoppingcart/{type}/post_order/" id="829fff11-ea25-4bc1-adaa-9d9a0086c192">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>type</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Post_order" id="9b84fe48-fa5a-427d-97f9-6bfb444578c1" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=iso-8859-1</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="4b75dea5-f89c-458f-98f3-989b2529da0a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request>[
+{
+	"product_id": "1",
+	"quantity": "2"
+},
+{
+	"product_id": "2",
+	"quantity": "2"
+},
+{
+	"product_id": "3",
+	"quantity": "1"
+},
+{
+	"product_id": "4",
+	"quantity": "2"
+}
+]</con:request>
+          <con:originalUri>http://localhost/shoppingcart/api/post_order.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="type" value="json" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>type</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Get_order" path="/shoppingcart/{type}/get_order/" id="a5bbed66-fb64-4a18-a2b2-07da3e437cfb">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>order_id</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>type</con:name>
+          <con:value>json</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>json</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Get_order" id="58e3d6c2-5926-494d-88ac-41761e18a92b" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="10f08945-5ccb-4061-ba20-3cfbeac53bd8" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/shoppingcart/api/get_order.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="order_id" value="90" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>order_id</con:entry>
+            <con:entry>type</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Service_creditcard.php" path="/shoppingcart/service_creditcard.php" id="7c757a0d-eb5e-475a-82bd-3ad267b43020">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Service_creditcard.php" id="bf5dfeed-b0cb-44b0-b78d-acbd106dd089" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ser="http://localhost/shoppingcart/service_creditcard.php">ser:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="b3e7ba96-59e5-4717-a263-89a921c78eb3" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request>{
+   "action" : "placeOrdercc",
+   "cc_money" : "9593",
+   "cc_name" : "S s",
+   "cc_number" : "1234123412341234",
+   "cc_exp_mo" : "01",
+   "cc_exp_yr" : "2018",
+   "cc_cvv" : "123",
+   "id" : "90"
+}</con:request>
+          <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="0dca858f-abde-42af-b727-46d5fabdadd9" name="ShoppingCart TestSuite">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="0e43d98e-5a8e-4663-8661-f597c13cb58a" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Buy a Macbook" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Get Products" id="0bed55b9-7c89-4dd8-a02b-c5ef4bf57ffc">
+        <con:settings/>
+        <con:config service="http://localhost" resourcePath="/shoppingcart/{type}/get_products/" methodName="Get_products" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get Products" id="b3e7ba96-59e5-4717-a263-89a921c78eb3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/shoppingcart/api/get_products.php</con:originalUri>
+            <con:assertion type="Response SLA Assertion" id="514beb90-fe8c-41f4-8d03-730637f4b438" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Buy a Macbook" id="809d748d-90fa-4eb6-a041-134e350dec71">
+        <con:settings/>
+        <con:config service="http://localhost" methodName="Post_order" resourcePath="/shoppingcart/{type}/post_order/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Buy a Macbook" id="668a006a-2ffb-40e5-84e6-df67c0e22da1" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost</con:endpoint>
+            <con:request>[
+{
+	"product_id": "${Get Products#Response#$[4]['id']}",
+	"quantity": "1"
+}
+]</con:request>
+            <con:originalUri>http://localhost/shoppingcart/api/post_order.php</con:originalUri>
+            <con:assertion type="JsonPath Match" id="b8a8cf92-f87f-44ef-b8e3-f57d425d6849" name="Verify the Price">
+              <con:configuration>
+                <path>$[0]['Total Order Amount']</path>
+                <content>2999</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="type" value="json" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>type</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:securityTest id="d2bbeea0-351f-4a47-affb-5a64d447153f" testCaseId="0e43d98e-5a8e-4663-8661-f597c13cb58a" name="SecurityTest 1" failSecurityTestOnScanErrors="true">
+        <con:settings>
+          <con:setting id="IncludeOverview">true</con:setting>
+          <con:setting id="IncludeResults">true</con:setting>
+          <con:setting id="IncludeSecurityTestOverview">true</con:setting>
+          <con:setting id="FlowLayout">true</con:setting>
+        </con:settings>
+        <con:testStepSecurityTest>
+          <con:testStepId>0bed55b9-7c89-4dd8-a02b-c5ef4bf57ffc</con:testStepId>
+          <con:testStepSecurityProScan type="SensitiveFileSecurityScan" name="Sensitive Files Exposure" id="588df331-5a4d-49b7-83b2-274b6de1ab7f" applyForFailedStep="false" disabled="false" runOnlyOnce="true">
+            <con:settings/>
+            <con:config xsi:type="con:SensitiveFileSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/known_hosts"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/authorized_keys"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.bak"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.old"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa~"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.bak"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.old"/>
+              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa~"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.bak"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.old"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/htaccess.txt"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess~"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.bak"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.old"/>
+              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd~"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bash_history"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bashrc"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.history"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.profile"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.mysql_history"/>
+              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/~root"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/config"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/HEAD"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/index"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/entries"/>
+              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/wc.db"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/pccsmysqladm/incs/dbconnect.inc"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/perl/"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/phpBB/phpinfo.php"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/weblogic"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-admin/wp-login.php"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-content/debug.log"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/WEB-INF/web.xml"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iisadmin/"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iissamples/"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.jsp"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.php"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.bak"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.old"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html~"/>
+              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/manager"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/database.yml"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/initializers/secret_token.rb"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/seeds.rb"/>
+              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/development.sqlite3"/>
+            </con:config>
+            <con:assertion type="Sensitive Files Exposure Assertion" id="b1cfd771-9e33-4d58-a383-35e72709413d" name="Sensitive Files Exposure"/>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityProScan>
+        </con:testStepSecurityTest>
+        <con:testStepSecurityTest>
+          <con:testStepId>809d748d-90fa-4eb6-a041-134e350dec71</con:testStepId>
+          <con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="a981b840-ab90-4cee-8fff-5fe9dd54245e" applyForFailedStep="false" disabled="true" runOnlyOnce="true">
+            <con:settings/>
+            <con:config xsi:type="con:CrossSiteScriptingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameterExposureStrings>&lt;PLAINTEXT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//-->&lt;/SCRIPT>">'>&lt;SCRIPT>alert(String.fromCharCode(88,83,83))&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>'';!--"&lt;XSS>=&amp;{()}</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js>&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert('XSS')></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=JaVaScRiPt:alert('XSS')></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(&amp;quot;XSS&amp;quot;)></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=`javascript:alert("RSnake says, 'XSS'")`></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG """>&lt;SCRIPT>alert("XSS")&lt;/SCRIPT>"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(String.fromCharCode(88,83,83))></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav	ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x09;ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0A;ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0D;ascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>perl -e 'print "&lt;IMG SRC=java\0script:alert(\"XSS\")>";' > out</con:parameterExposureStrings>
+              <con:parameterExposureStrings>perl -e 'print "&lt;SCR\0IPT>alert(\"XSS\")&lt;/SCR\0IPT>";' > out</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC=" &amp;#14;  javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT/XSS SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BODY onload!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert("XSS")></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT/SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;&lt;SCRIPT>alert("XSS");//&lt;&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js?&lt;B></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC=//ha.ckers.org/.j></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS')"</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;iframe src=http://soapui.org/scriptlet.html &lt;</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT>a=/XSS/alert(a.source)&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>\";alert('XSS');//</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;/TITLE>&lt;SCRIPT>alert("XSS");&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BODY BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BODY ONLOAD=alert('XSS')></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG DYNSRC="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG LOWSRC="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BGSOUND SRC="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BR SIZE="&amp;{alert('XSS')}"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;LAYER SRC="http://soapui.org/scriptlet.html">&lt;/LAYER></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="http://soapui.org/xss.css"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>@import'http://soapui.org/xss.css';&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="Link" Content="&lt;http://soapui.org/xss.css>; REL=stylesheet"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>BODY{-moz-binding:url("http://soapui.org/xssmoz.xml#xss")}&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;XSS STYLE="behavior: url(xss.htc);"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>li {list-style-image: url("javascript:alert('XSS')");}&lt;/STYLE>&lt;UL>&lt;LI>XSS</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC='vbscript:msgbox("XSS")'></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="mocha:[code]"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="livescript:[code]"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>ï¿½scriptï¿½alert(ï¿½XSSï¿½)ï¿½/scriptï¿½</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0; URL=http://;URL=javascript:alert('XSS');"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IFRAME SRC="javascript:alert('XSS');">&lt;/IFRAME></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;FRAMESET>&lt;FRAME SRC="javascript:alert('XSS');">&lt;/FRAMESET></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;TABLE BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;TABLE>&lt;TD BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(javascript:alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="background-image:\0075\0072\006C\0028'\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.1053\0053\0027\0029'\0029"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(&amp;#1;javascript:alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;DIV STYLE="width: expression(alert('XSS'));"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>@im\port'\ja\vasc\ript:alert("XSS")';&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG STYLE="xss:expr/*XSS*/ession(alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;XSS STYLE="xss:expression(alert('XSS'))"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>exp/*&lt;A STYLE='no\xss:noxss("*//*");xss:&amp;#101;x&amp;#x2F;*XSS*//*/*/pression(alert("XSS"))'></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE TYPE="text/javascript">alert('XSS');&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE>.XSS{background-image:url("javascript:alert('XSS')");}&lt;/STYLE>&lt;A CLASS=XSS>&lt;/A></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}&lt;/STYLE></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;!--[if gte IE 4]>&lt;SCRIPT>alert('XSS');&lt;/SCRIPT>&lt;![endif]--></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;BASE HREF="javascript:alert('XSS');//"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;OBJECT TYPE="text/x-scriptlet" DATA="http://soapui.org/scriptlet.html">&lt;/OBJECT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389>&lt;param name=url value=javascript:alert('XSS')>&lt;/OBJECT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;EMBED SRC="http://soapui.org/xss.swf" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;EMBED SRC="data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==" type="image/svg+xml" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings>
+              <con:parameterExposureStrings>a="get";b="URL(\"";c="javascript:";d="alert('XSS');\")";eval(a+b+c+d);</con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]]]>><![CDATA[<![CDATA[cript:alert('XSS');">]]]]>><![CDATA[</C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings><![CDATA[<HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;"></BODY></HTML>]]></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT SRC="http://soapui.org/xss.jpg">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;? echo('&lt;SCR)';echo('IPT>alert("XSS")&lt;/SCRIPT>'); ?></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;IMG SRC="http://soapui.org/somecommand.php?somevariables=maliciouscode"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>Redirect 302 /a.jpg http://soapui.org/admin.asp&amp;deleteuser</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;META HTTP-EQUIV="Set-Cookie" Content="USERID=&amp;lt;SCRIPT&amp;gt;alert('XSS')&amp;lt;/SCRIPT&amp;gt;"></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;HEAD>&lt;META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> &lt;/HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-</con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT =">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=">" '' SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT "a='>'" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=`>` SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT a=">'>" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+              <con:parameterExposureStrings>&lt;SCRIPT>document.write("&lt;SCRI");&lt;/SCRIPT>PT SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="3f4db2ea-29e0-4025-87f1-671354d9d4ca" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="CrosSiteScript" id="aac7d308-ad5c-4316-8e28-b54fd9c12687" name="Cross Site Scripting Detection">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Request $[0].product_id" parameterName="Request" xpath="$[0].product_id" checked="true"/>
+              <con:parameters label="Request $[0].quantity" parameterName="Request" xpath="$[0].quantity" checked="true"/>
+              <con:parameters label="type" parameterName="type" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="InvalidTypesSecurityScan" name="Invalid Types" id="0077a1da-5eb0-490f-a82c-95982508e4bb" applyForFailedStep="false" disabled="true" runOnlyOnce="true">
+            <con:settings/>
+            <con:config xsi:type="con:InvalidSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:typesList>
+                <con:type>3</con:type>
+                <con:value>true</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>4</con:type>
+                <con:value>GpM7</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>5</con:type>
+                <con:value>0FB7</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>9</con:type>
+                <con:value>-1E4f</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>10</con:type>
+                <con:value>12.45E+12</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>11</con:type>
+                <con:value>-1.23</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>12</con:type>
+                <con:value>SoapUI is	 the
+ best</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>13</con:type>
+                <con:value>P1Y2M3DT10H30M12.3S</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>14</con:type>
+                <con:value>1999-05-31T13:20:00.000-05:00</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>16</con:type>
+                <con:value>1999-05-31</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>22</con:type>
+                <con:value>-1267896799</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>23</con:type>
+                <con:value>-882223334991111111</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>24</con:type>
+                <con:value>-2147483647</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>25</con:type>
+                <con:value>-32768</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>26</con:type>
+                <con:value>127</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>27</con:type>
+                <con:value>0</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>28</con:type>
+                <con:value>-1</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>29</con:type>
+                <con:value>1</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>30</con:type>
+                <con:value>1267896799</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>31</con:type>
+                <con:value>882223334991111111</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>32</con:type>
+                <con:value>294967295</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>33</con:type>
+                <con:value>65535</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>34</con:type>
+                <con:value>255</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>35</con:type>
+                <con:value>SoapUI is the best</con:value>
+              </con:typesList>
+              <con:typesList>
+                <con:type>36</con:type>
+                <con:value>SoapUI is the best</con:value>
+              </con:typesList>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="30123a9b-c633-4e15-8385-2c5b553293a4" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Request" parameterName="Request" xpath="" checked="true"/>
+              <con:parameters label="type" parameterName="type" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="876a0037-fb0d-4a47-ba50-2addbe7f9310" applyForFailedStep="false" disabled="true" runOnlyOnce="true">
+            <con:settings/>
+            <con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>'--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>1'</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>admin'--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>/*!10000%201/0%20*/</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>/*!10000 1/0 */</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>1/0</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>'%20o/**/r%201/0%20--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>' o/**/r 1/0 --</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>;</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>'%20and%201=2%20--</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>' and 1=2 --</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:sqlInjectionStrings>
+              <con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="139ddb54-b813-4963-925d-72b59f29b09b" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Request $[0].product_id" parameterName="Request" xpath="$[0].product_id" checked="true"/>
+              <con:parameters label="Request $[0].quantity" parameterName="Request" xpath="$[0].quantity" checked="true"/>
+              <con:parameters label="type" parameterName="type" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+          <con:testStepSecurityScan type="XPathInjectionSecurityScan" name="XPath Injection" id="95eab3ce-0640-4c80-a158-84f66589f517" applyForFailedStep="false" disabled="true" runOnlyOnce="true">
+            <con:settings/>
+            <con:config xsi:type="con:XPathInjection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:xpathList>or name(//users/LoginID[1]) = 'LoginID' or 'a'='b</con:xpathList>
+              <con:xpathList>' or '1'='1</con:xpathList>
+              <con:xpathList>1/0</con:xpathList>
+              <con:xpathList>'%20o/**/r%201/0%20--</con:xpathList>
+              <con:xpathList>' o/**/r 1/0 --</con:xpathList>
+              <con:xpathList>;</con:xpathList>
+              <con:xpathList>'%20and%201=2%20--</con:xpathList>
+              <con:xpathList>' and 1=2 --</con:xpathList>
+              <con:xpathList>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:xpathList>
+              <con:xpathList>test� UNION select 1, @@version, 1, 1;�</con:xpathList>
+            </con:config>
+            <con:assertion type="Sensitive Information Exposure" id="4219970f-e4d0-4189-92d5-0712bf867053" name="Sensitive Information Exposure">
+              <con:configuration/>
+            </con:assertion>
+            <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+            <con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:parameters label="Username" parameterName="Username" xpath="" checked="true"/>
+              <con:parameters label="Request $[0].product_id" parameterName="Request" xpath="$[0].product_id" checked="true"/>
+              <con:parameters label="Request $[0].quantity" parameterName="Request" xpath="$[0].quantity" checked="true"/>
+              <con:parameters label="type" parameterName="type" xpath="" checked="true"/>
+              <con:parameters label="Password" parameterName="Password" xpath="" checked="true"/>
+            </con:checkedParameters>
+            <con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <con:strategy>ONE_BY_ONE</con:strategy>
+              <con:delay>100</con:delay>
+            </con:executionStrategy>
+          </con:testStepSecurityScan>
+        </con:testStepSecurityTest>
+        <con:properties/>
+        <con:reportParameters/>
+      </con:securityTest>
+      <con:breakPoints>
+        <con:testStepId>0bed55b9-7c89-4dd8-a02b-c5ef4bf57ffc</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>809d748d-90fa-4eb6-a041-134e350dec71</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="b34bd676-36db-4afa-933b-0315574c5112" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Buy all products - DataDriven" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="datasource" name="DataSource- Excel" id="2d6281b0-a3da-40d7-a626-4d8140d33f83">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>D:/OneDrive - SmartBear Software, Inc/Jenkins/Devops Build/ReadyAPI/Data.xls</file>
+              <worksheet>Sheet1</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>Product</con:property>
+          <con:property>Product_ID</con:property>
+          <con:property>Quantity</con:property>
+          <con:property>TotalPrice</con:property>
+          <con:completeLastOperation>true</con:completeLastOperation>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Buy a product[From DataSource]" id="eca76ad7-87b3-412e-830a-e23e984c9e83">
+        <con:settings/>
+        <con:config service="http://localhost" methodName="Post_order" resourcePath="/shoppingcart/{type}/post_order/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Buy a product[From DataSource]" id="6bf4a520-a318-46bc-b315-a9fca7c19c40" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost</con:endpoint>
+            <con:request>[
+{
+	"product_id": "${DataSource- Excel#Product_ID}",
+	"quantity": "${DataSource- Excel#Quantity}"
+}
+]</con:request>
+            <con:originalUri>http://localhost/shoppingcart/post_order/</con:originalUri>
+            <con:assertion type="JsonPath Match" id="4eb82717-1564-4a3d-a598-9557c5767e9a" name="Very Price against Excel">
+              <con:configuration>
+                <path>$[0]['Item Total Price']</path>
+                <content>${DataSource- Excel#TotalPrice}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="type" value="json" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="Write Data to Excel" id="094fd629-dda1-41ad-9840-e63e95e6c77c">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file>D:/OneDrive - SmartBear Software, Inc/Jenkins/Devops Build/ReadyAPI/Data.xls</file>
+              <outfile>D:/OneDrive - SmartBear Software, Inc/Jenkins/Devops Build/ReadyAPI/Data.xls</outfile>
+              <worksheet>Sheet1</worksheet>
+              <cell>E2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>OrderID</con:name>
+              <con:value>${Buy a product[From DataSource]#Response#$[0]['Order ID']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>OrderPrice</con:name>
+              <con:value>${Buy a product[From DataSource]#Response#$[0]['Item Total Price']}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="00eb2a40-930a-4176-9439-73145d677c14">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource- Excel</dataSourceStep>
+          <targetStep>But a product[From DataSource]</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>2d6281b0-a3da-40d7-a626-4d8140d33f83</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>094fd629-dda1-41ad-9840-e63e95e6c77c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="ad7edb72-a0c8-4ecf-8627-416f85e3bcd9" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Get all Orders" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Get all orders" id="2055951c-2f0d-4e6b-bb79-97c1e3121ad2">
+        <con:settings/>
+        <con:config service="http://localhost" methodName="Get_orders" resourcePath="/shoppingcart/{type}/get_orders/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Get all orders" id="d0e709d8-92d4-4d16-8287-5b578c3adf45" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/shoppingcart/api/get_orders.php</con:originalUri>
+            <con:assertion type="Invalid HTTP Status Codes" id="42913483-2e86-40be-bf70-2b7b553e0b4f" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>500;501</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="HTTP Header Equals" id="b19d79eb-8f93-4702-b5c0-af4f7b701470" name="HTTP Header Equals">
+              <con:configuration>
+                <Header>Content-Type</Header>
+                <Value>application/json</Value>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="e81eb1b0-99d6-4132-b3d4-c48af0476a17" name="Response SLA - 2 seconds">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple NotContains" id="3fc84b14-358d-4476-bcc1-d0bfc18244d1" name="Not Contains - Invalid Login">
+              <con:configuration>
+                <token>Invalid Login</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>true</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="4218b9b2-be7f-4255-9bbd-302ede53b352" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Pay for order" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="581157c2-f4b0-48eb-8c5f-5d8e123e2c09">
+        <con:settings/>
+        <con:config service="http://localhost" methodName="Service_creditcard.php" resourcePath="/shoppingcart/service_creditcard.php" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="64e76d00-9484-4e5a-ba3b-4201d4885801" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost</con:endpoint>
+            <con:request>{
+   "action" : "placeOrdercc",
+   "cc_money" : "99",
+   "cc_name" : "S s",
+   "cc_number" : "1234123412341234",
+   "cc_exp_mo" : "01",
+   "cc_exp_yr" : "2018",
+   "cc_cvv" : "123",
+   "id" : "2509"
+}</con:request>
+            <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+            <con:assertion type="JsonPath Match" id="776d0e27-3266-46c0-92bf-f402bfcc85ec" name="Match content of [Reason]">
+              <con:configuration>
+                <path>$['Reason']</path>
+                <content>*</content>
+                <allowWildcards>true</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>ShoppingCart</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="ae141db8-7a3b-4b24-929c-d4d52a35afed" name="Virtual Service - Payment">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="3a194553-fe11-4966-8f77-c2e8295957a8" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Pay for a product" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Payment" id="9b3599d3-f013-4639-b9a8-ccc89c5d126d">
+        <con:settings/>
+        <con:config service="http://localhost" methodName="Service_creditcard.php" resourcePath="/shoppingcart/service_creditcard.php" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Payment" id="0ee1eae9-fb7d-41fc-a736-130af536d17f" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost:8000</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:restMockService id="44596ec2-bf2d-4510-8e64-58446f20fb64" port="8082" path="/" host="localhost" name="cc_vs">
+    <con:settings/>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/shoppingcart/service_creditcard.php" method="POST" resourcePath="/shoppingcart/service_creditcard.php" id="ca1aa4d5-cc47-4293-8ebb-95c70e032a04">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Response 1" id="4e046589-a5e4-41a2-bc4f-fe49053bc4ea" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+   "Status" : "Transaction Success",
+   "Reason" : "Approved",
+   "Status Code" : "100"
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>ShoppingCart</con:name>
+      <con:type>Basic</con:type>
+      <con:username>sanketh.shanbhag@smartbear.com</con:username>
+      <con:password>India@123</con:password>
+    </con:basicAuthEntry>
+  </con:authRepository>
+  <con:loadUiTest name="Load Test 1" id="c96da169-fcb3-4a3d-a159-7dae4017a4a3">
+    <con:settings>
+      <con:setting id="soapUIObjectSourceId">ad7edb72-a0c8-4ecf-8627-416f85e3bcd9</con:setting>
+      <con:setting id="soapUIObjectSourceType">soapUIObjectSourceType_RestRequest</con:setting>
+    </con:settings>
+    <con1:loadui-project id="810751bc-bdc5-4778-b793-2ab1e1e58039" label="Load Test 1" xmlns:con1="http://eviware.com/loadui/config">
+      <con1:properties>
+        <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+        <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.saveReport" type="java.lang.Boolean">false</con1:property>
+        <con1:property propagates="true" key="ModelItem.reportFolder" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.reportFormat" type="java.lang.String"/>
+        <con1:property propagates="true" key="Temporary project" type="java.lang.String"/>
+        <con1:property propagates="true" key="ModelItem.rate" type="java.lang.Long">50</con1:property>
+        <con1:property propagates="true" key="ModelItem.loadDistributionType" type="com.smartbear.load.facade.LoadDistributionType">Relative</con1:property>
+        <con1:property propagates="true" key="ModelItem.remoteMode" type="java.lang.String"/>
+      </con1:properties>
+      <con1:attributes>
+        <con1:property key="limits">Time=40;</con1:property>
+      </con1:attributes>
+      <con1:addons>
+        <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="696492d0-8606-487a-bf7c-e279a288ba08">
+          <con1:attributes>
+            <con1:property key="parentId">810751bc-bdc5-4778-b793-2ab1e1e58039</con1:property>
+            <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkODEwNzUxYmMtYmRjNS00Nzc4LWI3OTMtMmFiMWUxZTU4MDM5dAAEbWFpbnQABk1FRElBTnQAClRpbWUgVGFrZW4=</con1:property>
+            <con1:property key="Labeled@label">Time Taken - median</con1:property>
+            <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECfQAAAAAAAAAAAAAAAAAA=</con1:property>
+            <con1:property key="tolerancePeriod">0</con1:property>
+            <con1:property key="toleranceAllowedOccurrences">0</con1:property>
+            <con1:property key="stopTestOnFailure">true</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:addon>
+        <con1:addon type="com.eviware.loadui.pro.api.monitoring.ServerAddon" id="650e6c95-78e5-49f4-ac5e-6f53a34a2166">
+          <con1:properties>
+            <con1:property propagates="false" key="ServerItem.host" type="java.lang.String">SB-IN-SANKETH01</con1:property>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="label">MySQL</con1:property>
+          </con1:attributes>
+          <con1:addons>
+            <con1:addon type="monitor" id="4448443c-22ec-4377-9009-762d32b269ec">
+              <con1:properties>
+                <con1:property propagates="true" key="_storedProperties[base]" type="java.lang.String">237:11:Connections211:11:Connections14:java.lang.Long19:Slow_launch_threads14:java.lang.Long15:Aborted_clients14:java.lang.Long17:Threads_connected14:java.lang.Long15:Threads_running14:java.lang.Long14:Threads_cached14:java.lang.Long6:4:main109:2:IO94:14:Bytes_received14:java.lang.Long10:Open_files14:java.lang.Long10:Bytes_sent14:java.lang.Long6:4:main288:11:Query cache262:18:Qcache_free_blocks14:java.lang.Long19:Qcache_total_blocks14:java.lang.Long20:Qcache_lowmem_prunes14:java.lang.Long23:Qcache_queries_in_cache14:java.lang.Long14:Qcache_inserts14:java.lang.Long17:Qcache_not_cached14:java.lang.Long11:Qcache_hits14:java.lang.Long6:4:main316:13:Command count288:26:Handler_savepoint_rollback14:java.lang.Long13:Handler_write14:java.lang.Long16:Handler_rollback14:java.lang.Long14:Handler_delete14:java.lang.Long14:Flush_commands14:java.lang.Long17:Handler_savepoint14:java.lang.Long14:Handler_update14:java.lang.Long14:Handler_commit14:java.lang.Long6:4:main190:11:Query count164:7:Queries14:java.lang.Long12:Select_range14:java.lang.Long16:Select_full_join14:java.lang.Long18:Select_range_check14:java.lang.Long12:Slow_queries14:java.lang.Long6:4:main270:9:Key rates247:17:Key_read_requests14:java.lang.Long15:Key_blocks_used14:java.lang.Long17:Key_blocks_unused14:java.lang.Long18:Key_write_requests14:java.lang.Long9:Key_reads14:java.lang.Long22:Key_blocks_not_flushed14:java.lang.Long10:Key_writes14:java.lang.Long6:4:main319:6:InnoDB299:20:Innodb_pages_written14:java.lang.Long24:Innodb_row_lock_time_avg14:java.lang.Long17:Innodb_pages_read14:java.lang.Long28:Innodb_buffer_pool_wait_free14:java.lang.Long20:Innodb_pages_created14:java.lang.Long29:Innodb_row_lock_current_waits14:java.lang.Long21:Innodb_row_lock_waits14:java.lang.Long6:4:main206:6:Tables186:18:Table_locks_waited14:java.lang.Long11:Open_tables14:java.lang.Long13:Opened_tables14:java.lang.Long23:Created_tmp_disk_tables14:java.lang.Long21:Table_locks_immediate14:java.lang.Long6:4:main148:10:Sort count123:9:Sort_rows14:java.lang.Long17:Sort_merge_passes14:java.lang.Long9:Sort_scan14:java.lang.Long10:Sort_range14:java.lang.Long6:4:main250:10:Read rates225:16:Handler_read_key14:java.lang.Long18:Handler_read_first14:java.lang.Long17:Handler_read_prev14:java.lang.Long21:Handler_read_rnd_next14:java.lang.Long17:Handler_read_next14:java.lang.Long16:Handler_read_rnd14:java.lang.Long6:4:main</con1:property>
+                <con1:property propagates="true" key="monitorName" type="java.lang.String">My monitor</con1:property>
+                <con1:property propagates="true" key="port" type="java.lang.Integer">3306</con1:property>
+                <con1:property propagates="true" key="username" type="java.lang.String">sanketh</con1:property>
+                <con1:property propagates="true" key="_password" type="java.lang.String">India@123</con1:property>
+              </con1:properties>
+              <con1:attributes>
+                <con1:property key="_type">MySQL</con1:property>
+              </con1:attributes>
+              <con1:addons/>
+            </con1:addon>
+          </con1:addons>
+        </con1:addon>
+        <con1:addon type="com.eviware.loadui.pro.api.monitoring.ServerAddon" id="6d1cf344-2372-435b-9d1c-57f9e781e82a">
+          <con1:properties>
+            <con1:property propagates="false" key="ServerItem.host" type="java.lang.String">SB-IN-SANKETH01</con1:property>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="label">My server 1</con1:property>
+          </con1:attributes>
+          <con1:addons>
+            <con1:addon type="monitor" id="c7e6b70a-ed69-40ce-8186-071ee2ffa90f">
+              <con1:properties>
+                <con1:property propagates="true" key="_storedProperties[typeperf]" type="java.lang.String">563:9:Processor525:14:Interrupts/sec16:java.lang.Double11:% User Time16:java.lang.Double11:% Idle Time16:java.lang.Double8:DPC Rate16:java.lang.Double9:% C2 Time16:java.lang.Double18:C2 Transitions/sec16:java.lang.Double16:% Interrupt Time16:java.lang.Double16:% Processor Time16:java.lang.Double15:DPCs Queued/sec16:java.lang.Double18:C1 Transitions/sec16:java.lang.Double9:% C1 Time16:java.lang.Double17:% Privileged Time16:java.lang.Double10:% DPC Time16:java.lang.Double18:C3 Transitions/sec16:java.lang.Double9:% C3 Time16:java.lang.Double20:1:01:11:21:36:_Total998:11:LogicalDisk925:19:Disk Read Bytes/sec16:java.lang.Double28:Avg. Disk Write Queue Length16:java.lang.Double20:Disk Write Bytes/sec16:java.lang.Double25:Current Disk Queue Length16:java.lang.Double19:Avg. Disk sec/Write16:java.lang.Double11:% Idle Time16:java.lang.Double22:Avg. Disk Queue Length16:java.lang.Double16:% Disk Read Time16:java.lang.Double11:% Disk Time16:java.lang.Double24:Avg. Disk Bytes/Transfer16:java.lang.Double17:% Disk Write Time16:java.lang.Double14:Free Megabytes16:java.lang.Double12:Split IO/Sec16:java.lang.Double15:Disk Writes/sec16:java.lang.Double18:Avg. Disk sec/Read16:java.lang.Double14:Disk Bytes/sec16:java.lang.Double12:% Free Space16:java.lang.Double14:Disk Reads/sec16:java.lang.Double18:Disk Transfers/sec16:java.lang.Double21:Avg. Disk Bytes/Write16:java.lang.Double27:Avg. Disk Read Queue Length16:java.lang.Double22:Avg. Disk sec/Transfer16:java.lang.Double20:Avg. Disk Bytes/Read16:java.lang.Double52:15:HarddiskVolume12:C:2:D:15:HarddiskVolume56:_Total1564:6:Memory1543:24:Modified Page List Bytes16:java.lang.Double15:Pages Input/sec16:java.lang.Double16:Pages Output/sec16:java.lang.Double35:Standby Cache Normal Priority Bytes16:java.lang.Double15:Page Writes/sec16:java.lang.Double16:Available KBytes16:java.lang.Double19:Pool Nonpaged Bytes16:java.lang.Double25:Pool Paged Resident Bytes16:java.lang.Double15:Committed Bytes16:java.lang.Double16:Write Copies/sec16:java.lang.Double16:Available MBytes16:java.lang.Double21:Transition Faults/sec16:java.lang.Double16:Cache Faults/sec16:java.lang.Double24:% Committed Bytes In Use16:java.lang.Double17:Pool Paged Allocs16:java.lang.Double23:System Code Total Bytes16:java.lang.Double27:System Cache Resident Bytes16:java.lang.Double25:System Driver Total Bytes16:java.lang.Double11:Cache Bytes16:java.lang.Double44:Long-Term Average Standby Cache Lifetime (s)16:java.lang.Double24:Standby Cache Core Bytes16:java.lang.Double30:Free System Page Table Entries16:java.lang.Double15:Available Bytes16:java.lang.Double12:Commit Limit16:java.lang.Double14:Page Reads/sec16:java.lang.Double15:Page Faults/sec16:java.lang.Double26:System Code Resident Bytes16:java.lang.Double16:Pool Paged Bytes16:java.lang.Double28:System Driver Resident Bytes16:java.lang.Double22:Demand Zero Faults/sec16:java.lang.Double20:Pool Nonpaged Allocs16:java.lang.Double27:Standby Cache Reserve Bytes16:java.lang.Double16:Cache Bytes Peak16:java.lang.Double9:Pages/sec16:java.lang.Double31:Transition Pages RePurposed/sec16:java.lang.Double27:Free &amp; Zero Page List Bytes16:java.lang.Double6:4:main894:12:PhysicalDisk855:19:Disk Read Bytes/sec16:java.lang.Double28:Avg. Disk Write Queue Length16:java.lang.Double20:Disk Write Bytes/sec16:java.lang.Double25:Current Disk Queue Length16:java.lang.Double19:Avg. Disk sec/Write16:java.lang.Double11:% Idle Time16:java.lang.Double22:Avg. Disk Queue Length16:java.lang.Double16:% Disk Read Time16:java.lang.Double11:% Disk Time16:java.lang.Double24:Avg. Disk Bytes/Transfer16:java.lang.Double17:% Disk Write Time16:java.lang.Double12:Split IO/Sec16:java.lang.Double15:Disk Writes/sec16:java.lang.Double18:Avg. Disk sec/Read16:java.lang.Double14:Disk Bytes/sec16:java.lang.Double14:Disk Reads/sec16:java.lang.Double18:Disk Transfers/sec16:java.lang.Double21:Avg. Disk Bytes/Write16:java.lang.Double27:Avg. Disk Read Queue Length16:java.lang.Double22:Avg. Disk sec/Transfer16:java.lang.Double20:Avg. Disk Bytes/Read16:java.lang.Double17:7:0 C: D:6:_Total1080:17:Network Interface973:24:Packets Received Unknown16:java.lang.Double22:TCP RSC Exceptions/sec16:java.lang.Double27:TCP RSC Average Packet Size16:java.lang.Double20:Packets Received/sec16:java.lang.Double32:Packets Received Non-Unicast/sec16:java.lang.Double26:TCP Active RSC Connections16:java.lang.Double16:Packets Sent/sec16:java.lang.Double23:Packets Outbound Errors16:java.lang.Double23:Packets Received Errors16:java.lang.Double14:Bytes Sent/sec16:java.lang.Double19:Output Queue Length16:java.lang.Double26:Packets Received Discarded16:java.lang.Double24:Packets Sent Unicast/sec16:java.lang.Double29:TCP RSC Coalesced Packets/sec16:java.lang.Double15:Bytes Total/sec16:java.lang.Double26:Packets Outbound Discarded16:java.lang.Double21:Offloaded Connections16:java.lang.Double28:Packets Received Unicast/sec16:java.lang.Double28:Packets Sent Non-Unicast/sec16:java.lang.Double11:Packets/sec16:java.lang.Double18:Bytes Received/sec16:java.lang.Double17:Current Bandwidth16:java.lang.Double80:39:Intel[R] Ethernet Connection [4] I219-V35:Intel[R] Dual Band Wireless-AC 8265731:6:System711:20:Context Switches/sec16:java.lang.Double14:System Up Time16:java.lang.Double27:File Control Operations/sec16:java.lang.Double22:Processor Queue Length16:java.lang.Double9:Processes16:java.lang.Double19:File Read Bytes/sec16:java.lang.Double24:File Data Operations/sec16:java.lang.Double7:Threads16:java.lang.Double23:% Registry Quota In Use16:java.lang.Double24:Exception Dispatches/sec16:java.lang.Double24:File Read Operations/sec16:java.lang.Double25:File Write Operations/sec16:java.lang.Double20:File Write Bytes/sec16:java.lang.Double20:Alignment Fixups/sec16:java.lang.Double22:File Control Bytes/sec16:java.lang.Double16:System Calls/sec16:java.lang.Double23:Floating Emulations/sec16:java.lang.Double6:4:main112:11:Paging File62:12:% Usage Peak16:java.lang.Double7:% Usage16:java.lang.Double30:19:\??\C:\pagefile.sys6:_Total</con1:property>
+                <con1:property propagates="true" key="monitorName" type="java.lang.String">Windows</con1:property>
+              </con1:properties>
+              <con1:attributes>
+                <con1:property key="_type">Windows</con1:property>
+              </con1:attributes>
+              <con1:addons/>
+            </con1:addon>
+          </con1:addons>
+        </con1:addon>
+      </con1:addons>
+      <con1:scene label="Get all orders" id="03302469-0158-4193-9f86-c174e4c09067" version="1">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes>
+          <con1:property key="limits">Time=40;</con1:property>
+        </con1:attributes>
+        <con1:addons/>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="c87e2701-6946-43ff-9073-6d6246a4a221" category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">30</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">false</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="ShoppingCart TestSuite:Get all Orders" id="7777022e-a8c7-4da0-8a24-4edcceeaffce" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">10000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">ad7edb72-a0c8-4ecf-8627-416f85e3bcd9</con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.FixedVU" label="Fixed Load 2" id="45f7b854-04a1-43f5-bc06-2e68f9262f51" category="Generators">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+            <con1:property propagates="true" key="load" type="java.lang.Long">50</con1:property>
+            <con1:property propagates="true" key="interval" type="java.lang.Long">1000</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Fixed Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId="c87e2701-6946-43ff-9073-6d6246a4a221/outgoingTerminal" inputTerminalId="45f7b854-04a1-43f5-bc06-2e68f9262f51/stateTerminal"/>
+        <con1:connection outputTerminalId="45f7b854-04a1-43f5-bc06-2e68f9262f51/triggerTerminal" inputTerminalId="7777022e-a8c7-4da0-8a24-4edcceeaffce/triggerTerminal"/>
+        <con1:connection outputTerminalId="7777022e-a8c7-4da0-8a24-4edcceeaffce/runningTerminal" inputTerminalId="45f7b854-04a1-43f5-bc06-2e68f9262f51/Sample Count"/>
+      </con1:scene>
+      <con1:scene label="Buy a MacBook" id="fab4e49e-4667-4996-aef2-080c7b056fd0" version="1">
+        <con1:properties>
+          <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+          <con1:property propagates="true" key="CanvasItem.abortOnFinish" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.followProject" type="java.lang.Boolean">true</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRatePercentage" type="java.lang.Long">100</con1:property>
+          <con1:property propagates="true" key="SceneItem.scenarioRateSpecific" type="java.lang.Long">10</con1:property>
+          <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
+        </con1:properties>
+        <con1:attributes>
+          <con1:property key="limits">Time=40;</con1:property>
+        </con1:attributes>
+        <con1:addons>
+          <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="c8d6cb5c-ebba-4a82-a512-0467921468cc">
+            <con1:attributes>
+              <con1:property key="parentId">fab4e49e-4667-4996-aef2-080c7b056fd0</con1:property>
+              <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkZmFiNGU0OWUtNDY2Ny00OTk2LWFlZjItMDgwYzdiMDU2ZmQwdAAEbWFpbnQABVRPVEFMdAAOVGVzdCBjYXNlIHJ1bnM=</con1:property>
+              <con1:property key="Labeled@label">Test case runs - total</con1:property>
+              <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECncAAAAAAAAAAAAAAAAAA=</con1:property>
+              <con1:property key="tolerancePeriod">0</con1:property>
+              <con1:property key="toleranceAllowedOccurrences">0</con1:property>
+              <con1:property key="stopTestOnFailure">false</con1:property>
+            </con1:attributes>
+            <con1:addons/>
+          </con1:addon>
+          <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="d9385c01-be99-4a04-a202-189b7b493f18">
+            <con1:attributes>
+              <con1:property key="parentId">fab4e49e-4667-4996-aef2-080c7b056fd0</con1:property>
+              <con1:property key="valueReference">rO0ABXNyADdjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5zZXJpYWxpemF0aW9uLlN0YXRpc3RpY1Jlc29sdmVyJwTr+w+xV3ECAARMAA1ob2xkZXJBZGRyZXNzdAASTGphdmEvbGFuZy9TdHJpbmc7TAAGc291cmNlcQB+AAFMAA1zdGF0aXN0aWNOYW1lcQB+AAFMAAx2YXJpYWJsZU5hbWVxAH4AAXhwdAAkZmFiNGU0OWUtNDY2Ny00OTk2LWFlZjItMDgwYzdiMDU2ZmQwdAAEbWFpbnQAA01BWHQAClRpbWUgVGFrZW4=</con1:property>
+              <con1:property key="Labeled@label">Time Taken - max</con1:property>
+              <con1:property key="constraint">rO0ABXNyADFjb20uZXZpd2FyZS5sb2FkdWkudXRpbC5hc3NlcnRpb24uUmFuZ2VDb25zdHJhaW50Y94NW62dOawCAAJEAANtYXhEAANtaW54cECncAAAAAAAAAAAAAAAAAA=</con1:property>
+              <con1:property key="tolerancePeriod">0</con1:property>
+              <con1:property key="toleranceAllowedOccurrences">0</con1:property>
+              <con1:property key="stopTestOnFailure">false</con1:property>
+            </con1:attributes>
+            <con1:addons/>
+          </con1:addon>
+        </con1:addons>
+        <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 2" id="b67f1adc-773b-419a-b01d-a5526f0ab3b4" category="Scheduler">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">20</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">20</con1:property>
+            <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
+            <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
+            <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">false</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Interval</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.components.soapui.SoapUISamplerComponent" label="ShoppingCart TestSuite:Get all Orders" id="c0b9b1ac-b9b8-4df7-9976-83b228caaad7" category="Runners">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="concurrentSamples" type="java.lang.Long">10000</con1:property>
+            <con1:property propagates="true" key="property_name_is_not_relevant_for_private_property" type="java.lang.Long">9223372036854775807</con1:property>
+            <con1:property propagates="true" key="maxQueueSize" type="java.lang.Long">1000</con1:property>
+            <con1:property propagates="true" key="countDiscarded" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disabledTestSteps" type="java.lang.String"/>
+            <con1:property propagates="true" key="_thinkTime" type="java.lang.Long">0</con1:property>
+            <con1:property propagates="true" key="ReadyApiTestCase" type="com.eviware.soapui.impl.wsdl.testcase.WsdlTestCase">0e43d98e-5a8e-4663-8661-f597c13cb58a</con1:property>
+            <con1:property propagates="true" key="raiseError" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="outputTestCaseProperties" type="java.lang.Boolean">true</con1:property>
+            <con1:property propagates="true" key="OutputLevel" type="java.lang.String">TestCase only</con1:property>
+            <con1:property propagates="true" key="closeConnectionsAfterRequest" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="disableSoapuiAssertions" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="forceShareDatasources" type="java.lang.Boolean">true</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ready API TestCase Runner</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:component type="com.eviware.loadui.impl.component.generators.RampUpVU" label="Ramp Load 1" id="5af98a49-d6c2-4b30-9320-928b6c1c7f3a" category="Generators">
+          <con1:properties>
+            <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
+            <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
+            <con1:property propagates="true" key="limitVU" type="java.lang.Long">9223372036854775807</con1:property>
+            <con1:property propagates="true" key="peakVU" type="java.lang.Long">50</con1:property>
+            <con1:property propagates="true" key="baseVU" type="java.lang.Long">2</con1:property>
+            <con1:property propagates="true" key="waitTime" type="java.lang.Long">2000</con1:property>
+            <con1:property propagates="true" key="rampDuration" type="java.lang.Long">2</con1:property>
+          </con1:properties>
+          <con1:attributes>
+            <con1:property key="com.eviware.loadui.api.model.ComponentItem@type">Ramp Load</con1:property>
+          </con1:attributes>
+          <con1:addons/>
+        </con1:component>
+        <con1:connection outputTerminalId="b67f1adc-773b-419a-b01d-a5526f0ab3b4/outgoingTerminal" inputTerminalId="5af98a49-d6c2-4b30-9320-928b6c1c7f3a/stateTerminal"/>
+        <con1:connection outputTerminalId="5af98a49-d6c2-4b30-9320-928b6c1c7f3a/triggerTerminal" inputTerminalId="c0b9b1ac-b9b8-4df7-9976-83b228caaad7/triggerTerminal"/>
+        <con1:connection outputTerminalId="c0b9b1ac-b9b8-4df7-9976-83b228caaad7/runningTerminal" inputTerminalId="5af98a49-d6c2-4b30-9320-928b6c1c7f3a/Sample Count"/>
+      </con1:scene>
+      <con1:statistics>
+        <con1:page title="DefaultLoadUIStatisticPage">
+          <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="" groupType="Monitors">
+            <con1:chart statisticHolder="4448443c-22ec-4377-9009-762d32b269ec">
+              <con1:attributes>
+                <con1:property key="_CHART_segments">74:36:4448443c-22ec-4377-9009-762d32b269ec11:Query count12:Slow_queries4:main68:36:4448443c-22ec-4377-9009-762d32b269ec11:Query count7:Queries4:main</con1:property>
+              </con1:attributes>
+            </con1:chart>
+            <con1:chart statisticHolder="c7e6b70a-ed69-40ce-8186-071ee2ffa90f">
+              <con1:attributes>
+                <con1:property key="_CHART_segments">72:36:c7e6b70a-ed69-40ce-8186-071ee2ffa90f6:Memory16:Available MBytes4:main77:36:c7e6b70a-ed69-40ce-8186-071ee2ffa90f9:Processor16:% Processor Time6:_Total</con1:property>
+              </con1:attributes>
+            </con1:chart>
+            <con1:attributes>
+              <con1:property key="GroupId">0a5c6761-62ad-4fde-b69e-6fe055c8a29d</con1:property>
+            </con1:attributes>
+          </con1:chartGroup>
+          <con1:chartGroup type="com.eviware.loadui.api.statistics.model.chart.line.LineChartView" title="New Statistics Group" groupType="Graph">
+            <con1:chart statisticHolder="810751bc-bdc5-4778-b793-2ab1e1e58039">
+              <con1:attributes>
+                <con1:property key="_CHART_segments">68:36:810751bc-bdc5-4778-b793-2ab1e1e580398:Failures10:PER_SECOND4:main75:36:810751bc-bdc5-4778-b793-2ab1e1e5803914:Test case runs10:PER_SECOND4:main</con1:property>
+              </con1:attributes>
+            </con1:chart>
+            <con1:chart statisticHolder="7777022e-a8c7-4da0-8a24-4edcceeaffce">
+              <con1:attributes>
+                <con1:property key="_CHART_segments">66:36:7777022e-a8c7-4da0-8a24-4edcceeaffce10:Time Taken6:MEDIAN4:main</con1:property>
+              </con1:attributes>
+            </con1:chart>
+            <con1:chart statisticHolder="c0b9b1ac-b9b8-4df7-9976-83b228caaad7">
+              <con1:attributes>
+                <con1:property key="_CHART_segments">66:36:c0b9b1ac-b9b8-4df7-9976-83b228caaad710:Time Taken6:MEDIAN4:main</con1:property>
+              </con1:attributes>
+            </con1:chart>
+            <con1:attributes>
+              <con1:property key="GroupId">710815f7-cafc-456a-a320-bc23a5937f02</con1:property>
+            </con1:attributes>
+          </con1:chartGroup>
+        </con1:page>
+      </con1:statistics>
+      <con1:heatUpTime>15</con1:heatUpTime>
+    </con1:loadui-project>
+    <con:loadUITestScenario projectId="810751bc-bdc5-4778-b793-2ab1e1e58039" scenarioId="03302469-0158-4193-9f86-c174e4c09067" name="Get all orders" id="6b91dad4-8804-420c-a32c-0ed743c7c428">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:loadUITestScenario projectId="810751bc-bdc5-4778-b793-2ab1e1e58039" scenarioId="fab4e49e-4667-4996-aef2-080c7b056fd0" name="Buy a MacBook" id="112e1e02-9371-4ff7-927c-a700fc2317fc">
+      <con:settings/>
+    </con:loadUITestScenario>
+    <con:loadUIPanelData id="8b8b9523-8b0f-4e1e-847e-f9d17fd31748">
+      <con:panel>Log</con:panel>
+      <con:data>
+        <con:paramName>column_width@Timestamp</con:paramName>
+        <con:paramValue>84</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@Timestamp</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@ID</con:paramName>
+        <con:paramValue>74</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@ID</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@Test step status</con:paramName>
+        <con:paramValue>120</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@Test step status</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@TriggerTimestamp</con:paramName>
+        <con:paramValue>84</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@TriggerTimestamp</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@TimeTaken</con:paramName>
+        <con:paramValue>115</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@TimeTaken</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@_wait_time_</con:paramName>
+        <con:paramValue>106</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@_wait_time_</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@Bytes</con:paramName>
+        <con:paramValue>52</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@Bytes</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@HTTP Status</con:paramName>
+        <con:paramValue>90</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@HTTP Status</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@CurrentlyRunning</con:paramName>
+        <con:paramValue>75</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@CurrentlyRunning</con:paramName>
+        <con:paramValue>true</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@Request</con:paramName>
+        <con:paramValue>67</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@Request</con:paramName>
+        <con:paramValue>false</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_width@Response</con:paramName>
+        <con:paramValue>77</con:paramValue>
+      </con:data>
+      <con:data>
+        <con:paramName>column_visible@Response</con:paramName>
+        <con:paramValue>false</con:paramValue>
+      </con:data>
+    </con:loadUIPanelData>
+    <con:statistics id="710815f7-cafc-456a-a320-bc23a5937f02"/>
+    <con:reportParameters/>
+  </con:loadUiTest>
+  <con:tags/>
+</con:soapui-project>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a3e5a95c-9e6c-42d1-8246-192a2fff7045" created="2.3.0" activeEnvironment="Default environment" name="cc_vs" resourceRoot="" updated="2.3.0 2018-03-06T16:28:42Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="fd7bddb9-fdcb-4f56-8752-063ee3b3b96a" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost</con:endpoint>
+    </con:endpoints>
+    <con:environmentSpec>
+      <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+    <con:resource name="Postorder" path="/shoppingcart/json/post_order/" id="044dce8c-8564-47bf-b2f7-89c32e080768">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Postorder" id="a42f6889-7c1d-43bc-8347-83cb8a8f6021" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=iso-8859-1</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="c475b163-8a2b-4505-ae5d-5d2d1918d2e1" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost</con:endpoint>
+          <con:request>[
+{
+	"product_id": "1",
+	"quantity": "2"
+},
+{
+	"product_id": "2",
+	"quantity": "2"
+},
+{
+	"product_id": "3",
+	"quantity": "1"
+},
+{
+	"product_id": "4",
+	"quantity": "2"
+}
+]</con:request>
+          <con:originalUri>http://localhost/shoppingcart/json/postorder</con:originalUri>
+          <con:credentials>
+            <con:username>s.sanketh@gmail.com</con:username>
+            <con:password>india@123</con:password>
+            <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+            <con:authType>Global HTTP Settings</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="service_creditcard.php" path="/shoppingcart/service_creditcard.php" id="6f89c7ae-a32b-49ba-9b9e-c4f3514e19d9">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="caa49308-cfd4-43d0-a416-1be74c476ded" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ser="http://localhost/shoppingcart/service_creditcard.php">ser:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="9b1b6c32-9849-4b81-8ab0-9d8aab2bb947" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost:8000</con:endpoint>
+          <con:request>{
+   "action" : "placeOrdercc",
+   "cc_money" : "99",
+   "cc_name" : "S s",
+   "cc_number" : "1234123412341234",
+   "cc_exp_mo" : "01",
+   "cc_exp_yr" : "2018",
+   "cc_cvv" : "123",
+   "id" : null
+}</con:request>
+          <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="90b581a7-9683-47ed-9e5d-71d2accc9ed7" name="TestSuite 1">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="f976b4f1-e81a-4d5e-b6c8-b7fa61d969b3" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="REST Request" id="07053efc-d7d5-44c1-89c4-7d4c2989db3d">
+        <con:settings/>
+        <con:config service="http://localhost" methodName="Postorder" resourcePath="/shoppingcart/json/post_order/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="cfa89788-1c4a-4e93-9245-1189766e179d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://localhost</con:endpoint>
+            <con:request>[
+{
+	"product_id": "1",
+	"quantity": "2"
+},
+{
+	"product_id": "2",
+	"quantity": "2"
+},
+{
+	"product_id": "3",
+	"quantity": "1"
+},
+{
+	"product_id": "4",
+	"quantity": "2"
+}
+]</con:request>
+            <con:originalUri>http://localhost/shoppingcart/api/post_order.php</con:originalUri>
+            <con:credentials>
+              <con:username/>
+              <con:selectedAuthProfile>shoppingcart</con:selectedAuthProfile>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="REST Request 2" id="3fae986d-cce1-4159-8d3e-bb742b61047e">
+        <con:settings/>
+        <con:config service="http://localhost" resourcePath="/shoppingcart/service_creditcard.php" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request 2" id="9b1b6c32-9849-4b81-8ab0-9d8aab2bb947" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost:8000</con:endpoint>
+            <con:request>{
+   "action" : "placeOrdercc",
+   "cc_money" : "${REST Request#Response#$[0]['Total Order Amount']}",
+   "cc_name" : "S s",
+   "cc_number" : "1234123412341234",
+   "cc_exp_mo" : "01",
+   "cc_exp_yr" : "2018",
+   "cc_cvv" : "123",
+   "id" : ${REST Request#Response#$[0]['Order ID']}
+}</con:request>
+            <con:originalUri>http://localhost/shoppingcart/service_creditcard.php</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>shoppingcart</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+    <con:environmentSpec>
+      <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:testSuite>
+  <con:restMockService id="86a4f269-7043-4b26-963c-8374cacff226" port="8000" path="/" host="localhost" name="cc_vs">
+    <con:settings/>
+    <con:properties/>
+    <con:constraints>
+      <con:congestion>0</con:congestion>
+      <con:inputBandwidth>-1</con:inputBandwidth>
+      <con:outputBandwidth>-1</con:outputBandwidth>
+      <con:maxThreadPoolCapacity>20</con:maxThreadPoolCapacity>
+      <con:coreThreadPoolCapacity>5</con:coreThreadPoolCapacity>
+      <con:virtError>
+        <con:start>0</con:start>
+        <con:endless>true</con:endless>
+      </con:virtError>
+    </con:constraints>
+    <con:headerValidator type="NONE"/>
+    <con:restMockAction name="/shoppingcart/service_creditcard.php" method="POST" resourcePath="/shoppingcart/service_creditcard.php" id="7c58fa2e-7603-405c-bdf7-173e3244d4ea">
+      <con:settings/>
+      <con:defaultResponse>Success</con:defaultResponse>
+      <con:dispatchStyle>SEQUENCE</con:dispatchStyle>
+      <con:dispatchConfig/>
+      <con:dispatchXPath/>
+      <con:routeScript/>
+      <con:response name="Success" id="e5598761-0d60-40c3-8f98-37c3a7b16405" httpResponseStatus="200" mediaType="application/json" dataSource="">
+        <con:settings/>
+        <con:responseContent>{
+  "Status": "Transaction Approved",
+  "Status Code": 100,
+  "Reason": "Approved"
+}</con:responseContent>
+      </con:response>
+    </con:restMockAction>
+  </con:restMockService>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:virtServer>
+    <con:name>Docker</con:name>
+    <con:url>http://172.17.0.2</con:url>
+  </con:virtServer>
+  <con:authRepository>
+    <con:basicAuthEntry>
+      <con:name>shoppingcart</con:name>
+      <con:type>Basic</con:type>
+      <con:username>s.sanketh@gmail.com</con:username>
+      <con:password>India@123</con:password>
+    </con:basicAuthEntry>
+  </con:authRepository>
+  <con:environmentSpec>
+    <con:entry environmentId="92243450-117e-47fb-bec2-8472eaa3c3b4">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags/>
+</con:soapui-project>
