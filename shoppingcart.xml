@@ -467,54 +467,6 @@
             <con:settings/>
             <con:config xsi:type="con:SensitiveFileSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/known_hosts"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/authorized_keys"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.bak"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa.old"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_dsa~"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.bak"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa.old"/>
-              <con:sensitiveFile description="Sensitive SSH information" fileName="/.ssh/id_rsa~"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.bak"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess.old"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/htaccess.txt"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htaccess~"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.bak"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd.old"/>
-              <con:sensitiveFile description="May contain passwords or other sensitive information" fileName="/.htpasswd~"/>
-              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bash_history"/>
-              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.bashrc"/>
-              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.history"/>
-              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.profile"/>
-              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/.mysql_history"/>
-              <con:sensitiveFile description="Usually reside in a users home directory on a Linux/UNIX machine" fileName="/~root"/>
-              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/config"/>
-              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/HEAD"/>
-              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.git/index"/>
-              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/entries"/>
-              <con:sensitiveFile description="Contains info from SCM (git, svn...)" fileName="/.svn/wc.db"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/pccsmysqladm/incs/dbconnect.inc"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/perl/"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/phpBB/phpinfo.php"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/weblogic"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-admin/wp-login.php"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/wp-content/debug.log"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/WEB-INF/web.xml"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iisadmin/"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/iissamples/"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.jsp"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.php"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.bak"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html.old"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/index.html~"/>
-              <con:sensitiveFile description="May tell what type of web server is hosting the service" fileName="/manager"/>
-              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/database.yml"/>
-              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/config/initializers/secret_token.rb"/>
-              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/seeds.rb"/>
-              <con:sensitiveFile description="May exist if Ruby on Rails is used on the server" fileName="/db/development.sqlite3"/>
             </con:config>
             <con:assertion type="Sensitive Files Exposure Assertion" id="b1cfd771-9e33-4d58-a383-35e72709413d" name="Sensitive Files Exposure"/>
             <con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
