@@ -1228,7 +1228,7 @@
             <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
             <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
             <con1:property propagates="true" key="startAt" type="java.lang.Long">0</con1:property>
-            <con1:property propagates="true" key="duration" type="java.lang.Long">30</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">10</con1:property>
             <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
             <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
             <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">false</con1:property>
@@ -1319,8 +1319,8 @@
           <con1:properties>
             <con1:property propagates="true" key="ModelItem.description" type="java.lang.String"/>
             <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">true</con1:property>
-            <con1:property propagates="true" key="startAt" type="java.lang.Long">20</con1:property>
-            <con1:property propagates="true" key="duration" type="java.lang.Long">20</con1:property>
+            <con1:property propagates="true" key="startAt" type="java.lang.Long">10</con1:property>
+            <con1:property propagates="true" key="duration" type="java.lang.Long">10</con1:property>
             <con1:property propagates="true" key="unit" type="java.lang.String">Sec</con1:property>
             <con1:property propagates="true" key="mode" type="java.lang.String">Single</con1:property>
             <con1:property propagates="true" key="defaultMode" type="java.lang.Boolean">false</con1:property>
