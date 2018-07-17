@@ -44,8 +44,29 @@ pipeline {
       }
     }
     stage('ReadyAPI - Virtualization') {
-      steps {
-        echo 'All microservices tests go here.'
+      parallel {
+        stage('ReadyAPI - Virtualization') {
+          steps {
+            echo 'All microservices tests go here.'
+          }
+        }
+        stage('Virtualization : Deploy & Start') {
+          steps {
+            build(job: 'ReadyAPI Full Stack - Deploy and Start VirtServer', quietPeriod: 5)
+          }
+        }
+        stage('Virtualization - Microservices Tests') {
+          steps {
+            sleep 10
+            build(job: 'ReadyAPI Full Stack - Microservices Test', quietPeriod: 5, wait: true)
+          }
+        }
+        stage('Virtualization - Stop & Undeploy') {
+          steps {
+            sleep 40
+            build(job: 'ReadyAPI Full Stack - UnDeploy and Stop VirtServer', wait: true, quietPeriod: 5)
+          }
+        }
       }
     }
   }
