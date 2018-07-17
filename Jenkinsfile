@@ -63,7 +63,7 @@ pipeline {
         }
         stage('Virtualization - Stop & Undeploy') {
           steps {
-            sleep 40
+            sleep 90
           }
         }
       }
