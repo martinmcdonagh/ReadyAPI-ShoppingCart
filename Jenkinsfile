@@ -43,6 +43,20 @@ pipeline {
         }
       }
     }
+    stage('ReadyAPI functional test') {
+      parallel {
+        stage('ReadyAPI functional test') {
+          steps {
+            echo 'All API Securitytests go here'
+          }
+        }
+        stage('Shopping Cart API Security tests') {
+          steps {
+            build(job: 'ReadyAPI functional test', quietPeriod: 5, wait: true)
+          }
+        }
+      }
+    }
     stage('ReadyAPI - Virtualization') {
       parallel {
         stage('ReadyAPI - Virtualization') {
